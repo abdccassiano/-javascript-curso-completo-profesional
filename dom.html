@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM HTML</title>
+</head>
+<body>
+    <h1>Hola mundo</h1>
+
+    <p id="textoP">Texto p</p>
+    <p class="textoUno">Clase 1</p>
+    <p class="textoUno">Clase 2</p>
+    <p class="textoUno">Clase 3</p>
+
+    <div id="div">
+        <h3>Etiqueta h3</h3>
+    </div>
+
+    <script>
+        console.log(document.getElementsByTagName("div"));
+
+        console.log(document.getElementById("textoP"));
+
+        console.log(document.querySelectorAll(".textoUno"));
+
+        document.getElementById("div").innerHTML = "Hola mundo2";
+
+        document.getElementById("div").append("Hola mundo");
+    </script>
+</body>
+</html>
