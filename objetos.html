@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+
+    <label>Nombre: <input type="text" id="txtNombre" /></label><br />
+    <label>Apellido: <input type="text" id="txtApellido" /></label><br />
+    <label>Telefono: <input type="text" id="txtTelefono" /></label><br />
+    <label>Email: <input type="text" id="txtEmail" /></label>
+    <button id="btnAgregar">Agregar</button>
+    <div id="listado">
+
+    </div>
+
+    <script>
+        window.onload = iniciar();
+
+        var personas = [];
+
+        function iniciar() {
+            var btnAgregar = document.getElementById("btnAgregar");
+            btnAgregar.addEventListener("click", clickBtnAgregar);
+        }
+
+        function clickBtnAgregar() {
+            var nombre = document.getElementById("txtNombre").value;
+            var apellido = document.getElementById("txtApellido").value;
+            var telefono = document.getElementById("txtTelefono").value;
+            var email = document.getElementById("txtEmail").value;
+           
+            var persona = {
+                "nombre": nombre,
+                "apellido": apellido,
+                "telefono": telefono,
+                "email": email
+            }
+
+            personas.push(persona);
+            mostrarPersonas();
+        }
+
+        function mostrarPersonas() {
+            var listado = document.getElementById("listado");
+            var html = "";
+            for (var persona of personas) {
+                html += persona.nombre + ' ' + persona.apellido + ' ' + persona.telefono + ' ' + persona.email + '<br/>';
+            }
+            listado.innerHTML = html;
+        }
+        /*var persona = {
+            "nombre": "Abdul",
+            "apellido": "Campos",
+            "telefono": 75458784545,
+            "email": "abdccassiano@hotmail.com",
+            "direccion": "cuautla morelos",
+            "empleo": {
+                 "nombre": "programador",
+                 "localidad": "méxico"
+            }
+        }
+
+        alert(persona.empleo.nombre);
+        persona.telefon = "no tiene"
+        console.log(persona)*/
+    </script>
+</body>
+</html>

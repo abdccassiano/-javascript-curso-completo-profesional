@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales</title>
+</head>
+<body>
+    <script>
+        var edad = prompt("Ingrese su edad: ");
+        var estatura = prompt("Ingrese su estatura en metros:");
+        var hijodelDueño = prompt("Es hijo del dueño");
+        if(edad >= 13 && estatura >= 1.2 || hijodelDueño.toLocaleLowerCase() == 'si') {
+            alert("puede entrar");
+        }else {
+            alert("no puede entrar");
+        }
+    </script>
+</body>
+</html>
