@@ -10,11 +10,32 @@
 
     <script>
        
-       setTimeout(mostrarMensaje, 3000);
-
-       function mostrarMensaje() {
-           alert("Tiempo Completo");
+       var mostrarMensaje = function() {
+        alert("Tiempo Completo");
        }
+
+       //Arrow function
+
+       /*mostrarMensaje = () => {
+        alert("Tiempo Completo");
+       }*/
+
+       mostrarMensaje = () => alert("Tiempo Completo");
+
+       //Para ejecutar sólo una vez en espera
+       //setTimeout(() => alert("Tiempo Completo"), 3000);
+
+       //Para ejecutar cada segundo
+       //setInterval(() => alert("Tiempo cumplido"), 1000);
+       var timer = setInterval(() => alert("Tiempo cumplido"), 1000);
+
+       setTimeout(() => {
+        clearInterval(timer);
+       },10 * 1000);
+       
+       /*function mostrarMensaje() {
+        alert("Tiempo Completo"); 
+       }*/
     </script>
     
 </body>
